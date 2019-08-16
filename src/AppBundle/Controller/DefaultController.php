@@ -18,4 +18,12 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }
+
+    /**
+     * @Route("/sitio/{nombrePagina}/", name="pagina")
+     */
+    public function paginaAction($nombrePagina = 'ayuda')
+    {
+        return $this->render('sitio/'.$nombrePagina.'.html.twig');
+    }
 }
