@@ -94,7 +94,7 @@ class Usuario
     /**
      * @var string
      *
-     * @ORM\ManyToOne(targetEntity=AppBundle\Entity\Ciudad")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Ciudad")
      */
     private $ciudad;
 

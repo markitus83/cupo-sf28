@@ -13,13 +13,13 @@ class Venta
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity=AppBundle\Entity\Oferta")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Oferta")
      */
     protected $oferta;
 
     /**
      * @ORM\Id()
-     * @ORM\ManyToOne(targetEntity=AppBundle\Entity\Usuario")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Usuario")
      */
     protected $usuario;
 
@@ -51,7 +51,7 @@ class Venta
 
     /**
      * @param Oferta $oferta
-     * @return Venta
+     * @return $this
      */
     public function setOferta(Oferta $oferta)
     {
@@ -69,7 +69,7 @@ class Venta
 
     /**
      * @param Usuario $usuario
-     * @return Venta
+     * @return $this
      */
     public function setUsuario(Usuario $usuario)
     {

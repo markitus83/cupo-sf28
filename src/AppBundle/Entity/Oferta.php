@@ -115,7 +115,7 @@ class Oferta
     /**
      * @var string
      *
-     * @ORM\ManyToOne(targetEntity=AppBundle\Entity\Tienda")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Tienda")
      */
     private $tienda;
 
