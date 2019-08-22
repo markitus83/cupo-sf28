@@ -14,3 +14,6 @@
 
 # phpstorm
 .idea/
+
+# Misc
+commands.md
