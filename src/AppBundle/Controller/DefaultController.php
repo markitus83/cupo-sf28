@@ -9,14 +9,18 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="portada")
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ));
+        $em = $this->getDoctrine()->getManager();
+
+        $oferta = $em->getRepository('AppBundle\Entity\Oferta')->findOneBy([
+            'ciudad' => 202,
+            //'fechaPublicacion' => new \DateTime('today'),
+        ]);
+
+        return $this->render('portada.html.twig', ['oferta' => $oferta]);
     }
 
     /**
