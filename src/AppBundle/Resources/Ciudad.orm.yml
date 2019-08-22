@@ -1,0 +1,20 @@
+# Example for the Ciudad entity as YML file
+AppBundle\Entity\Ciudad:
+    type: entity
+    repositoryClass: AppBundle\Repository\CiudadRepository
+    id:
+        id:
+            type: integer
+            generator: {strategy: AUTO}
+    fields:
+        nombre:
+            type: string
+            length: 100
+        slug:
+            type: string
+            length: 100
+
+# Commands to generate the entities:
+# php app/console doctrine:generate:entities (all classes for all bundles)
+# php app/console doctrine:generate:entities AppBundle (class for AppBundle)
+# php app/console doctrine:generate:entities AppBundle:Ciudad (generate only this class)
