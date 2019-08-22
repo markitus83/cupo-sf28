@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 
+use AppBundle\Util\Slugger;
 use Doctrine\ORM\Mapping as ORM;
 /**
  * Class Ciudad
@@ -38,6 +39,7 @@ class Ciudad
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        $this->slug = Slugger::getSlug($nombre);
     }
 
     /**
